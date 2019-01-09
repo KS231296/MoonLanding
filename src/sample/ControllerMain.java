@@ -13,6 +13,9 @@ import java.util.Observable;
 
 public class ControllerMain {
 
+    private double thrustValue;
+
+
     ChangeListener listener = new ChangeListener() {
         @Override
         public void changed(ObservableValue observableValue, Object o, Object t1) {
@@ -22,11 +25,10 @@ public class ControllerMain {
     };
 
 
-    private double thrustValue;
 
 
     @FXML
-    public void thrust(){
+    public void thrust() {
         sliderThrust.valueProperty().addListener(listener);
 
     }
@@ -49,6 +51,8 @@ public class ControllerMain {
 
     @FXML
     void restart(ActionEvent event) {
+        // nowe okno z nformacją po zakończonej grze
+        // restart od początku
 
     }
 
